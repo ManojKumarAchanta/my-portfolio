@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/* Apply Space Grotesk font globally */
+@layer base {
+  html {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+/* Custom Scrollbar */
+html::-webkit-scrollbar {
+  width: 6px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #6d28d9; /* Updated to match new theme */
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background: #1e1b4b; /* Updated to match new theme */
+}
+
+/* Global styles */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-violet-600 via-indigo-500 to-purple-600;
+}
+
+.gradient-border {
+  @apply border border-transparent bg-gradient-to-r from-violet-600 via-indigo-500 to-purple-600 bg-clip-border;
+}
+
+.gradient-bg {
+  @apply bg-gradient-to-r from-violet-600 via-indigo-500 to-purple-600;
+}
+
+/* Instagram gradient for social icon */
+.instagram-gradient {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.instagram-gradient-icon svg path {
+  fill: url(#instagram-gradient);
+}
+
+.instagram-gradient-icon svg {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  fill: transparent;
+}
+
+/* Terminal button highlight */
+.terminal-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.terminal-btn::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff0000, #ff6b6b);
+  z-index: -1;
+  border-radius: 0.5rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
