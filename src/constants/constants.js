@@ -1,5 +1,37 @@
 export const projects = [
   {
+    title: "Smart Match - AI-Powered Job Matching",
+    img: "https://res.cloudinary.com/dhrhmmufs/image/upload/v1751271064/notedly-1_wykid0.png",
+    description:
+      "An AI-powered platform that analyzes resumes and job descriptions to generate match scores, skill insights, and downloadable cover letters.",
+    github: "https://github.com/ManojKumarAchanta/student-crud-client",
+    url: "https://smart-match-ai.vercel.app",
+    tags: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Express.js",
+      "tailwind",
+      "Shadcn UI",
+    ],
+  },
+  {
+    title: "Smart Match - AI-Powered Job Matching",
+    img: "https://res.cloudinary.com/dhrhmmufs/image/upload/v1751271202/Screenshot_from_2025-06-27_23-55-07_wihsxx.png",
+    description:
+      "A full-featured notes app with JWT auth and Gemini AI integration for enhancing and organizing rich-text notes.",
+    github: "https://github.com/ManojKumarAchanta/notedly",
+    url: "https://notedly-delta.vercel.app",
+    tags: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Express.js",
+      "tailwind",
+      "Shadcn UI",
+    ],
+  },
+  {
     title: "Student Management System",
     img: "https://res.cloudinary.com/dhrhmmufs/image/upload/v1746456559/student_ma_lmy8zl.png",
     description:
@@ -71,6 +103,11 @@ export const certifications = [
     title: "Soft Skills",
     description: "A certification in soft skills.",
     img: "https://res.cloudinary.com/dhrhmmufs/image/upload/v1746456572/softskills_k8kv9s.png", // Add certification image path
+  },
+  {
+    title: "HackerRank Java (Basic)",
+    description: "A certification in Java from HackerRank.",
+    img: "https://console.cloudinary.com/app/c-ec559d72ac607f9da92efc162beb91/assets/media_library/search/asset/bc4aff596e8dcb151b046366654961d7/manage/summary?q=&view_mode=mosaic&context=manage", // Add certification image path
   },
 ];
 export const studyEvents = [

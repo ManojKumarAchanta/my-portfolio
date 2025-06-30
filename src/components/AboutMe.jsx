@@ -85,12 +85,15 @@ const AboutMe = () => {
           >
             <div className={`space-y-4 text-base md:text-lg ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
               <p>
-                Hi there! I'm a passionate Full Stack Developer with expertise in the MERN stack.
-                I love building web applications that solve real-world problems and create meaningful user experiences.
+                I am a dedicated Full Stack Developer specializing in the MERN stack, with strong skills in building scalable and performant web applications.
+                I excel in creating dynamic user interfaces using React.js and developing robust backend services with Node.js and Express.js.
               </p>
               <p>
-                With a strong foundation in both frontend and backend development,
-                I enjoy taking on complex challenges and turning them into elegant solutions.
+                Experienced in designing secure authentication systems with JWT, managing application state using Redux and Zustand,
+                and deploying projects efficiently on cloud platforms like Vercel.
+                Additionally, I have explored and worked with over five different Linux distributions as well as Windows,
+                enhancing my versatility and understanding of diverse development environments.
+                I am passionate about solving complex problems and delivering clean, maintainable code that enhances user experiences.
               </p>
             </div>
 
@@ -106,11 +109,10 @@ const AboutMe = () => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className={`px-4 py-2 rounded-full text-sm md:text-base ${
-                      isDarkMode 
-                        ? 'bg-violet-500/20 text-violet-300' 
+                    className={`px-4 py-2 rounded-full text-sm md:text-base ${isDarkMode
+                        ? 'bg-violet-500/20 text-violet-300'
                         : 'bg-violet-100 text-violet-600'
-                    }`}
+                      }`}
                   >
                     {skill}
                   </motion.span>
