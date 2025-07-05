@@ -13,7 +13,7 @@ This is my personal portfolio website, built with React, Vite, and Tailwind CSS.
 
 ## 🚀 Live Demo
 
-[Link to your live portfolio URL]
+manojkumarachanta.tech
 
 ## 🛠️ Tech Stack
 
@@ -65,15 +65,18 @@ The application will be available at `http://localhost:5173`.
 
 **Hero Section**
 
-![Hero Section](https://i.imgur.com/your-screenshot-1.png)
+![image](https://github.com/user-attachments/assets/5b28bd66-225b-4bf0-b01c-2811e6992e40)
+
 
 **Projects Section**
 
-![Projects Section](https://i.imgur.com/your-screenshot-2.png)
+![image](https://github.com/user-attachments/assets/1869c207-aba9-457a-9139-385e8087fbf2)
+
 
 **Contact Section**
 
-![Contact Section](https://i.imgur.com/your-screenshot-3.png)
+![image](https://github.com/user-attachments/assets/1ca5ec8d-0b8a-41e5-897a-3314567f810a)
+
 
 ## 🤝 Contributing
 
