@@ -4,6 +4,7 @@ import Typewriter from "typewriter-effect";
 import { ThemeContext } from "../App.jsx";
 import SocialIcons from "./SocialIcons";
 import { MessageCircle } from "lucide-react";
+import { Helmet } from "react-helmet";
 
 const Terminal = ({ onClose }) => {
   const [showPrompt, setShowPrompt] = useState(false);
@@ -315,7 +316,8 @@ const Hero = () => {
             </motion.div>
           </div>
         </motion.div>
-
+        <Helmet>
+          
         {/* Content Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -454,6 +456,7 @@ const Hero = () => {
             <SocialIcons />
           </motion.div>
         </motion.div>
+              </Helmet>
       </div>
 
       <AnimatePresence>

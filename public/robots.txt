@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.xml-sitemaps.com/download/manojkumarachanta.tech-be232487b/sitemap.xml?view=1
