@@ -195,7 +195,7 @@ const Hero = () => {
   const [showChat, setShowChat] = useState(false);
   const [showTerminal, setShowTerminal] = useState(false);
   const { isDarkMode } = useContext(ThemeContext);
-  const resumeURL = "/ManojKumarAchanta_Resume_.pdf";
+  const resumeURL = "/manojkumar_resume2026.pdf";
   const handleShowTerminal = () => {
     setShowTerminal(true);
   };
@@ -219,9 +219,8 @@ const Hero = () => {
           <div className="absolute -bottom-8 left-20 w-48 sm:w-64 md:w-72 h-48 sm:h-64 md:h-72 bg-violet-600 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
         </div>
         <div
-          className={`absolute inset-0 ${
-            isDarkMode ? "bg-[#0a192f]/90" : "bg-white/90"
-          }`}
+          className={`absolute inset-0 ${isDarkMode ? "bg-[#0a192f]/90" : "bg-white/90"
+            }`}
         ></div>
       </div>
 
@@ -254,9 +253,8 @@ const Hero = () => {
               className="absolute inset-0 rounded-3xl p-1"
             >
               <div
-                className={`h-full w-full rounded-3xl ${
-                  isDarkMode ? "bg-[#0D192C]" : "bg-white"
-                } overflow-hidden`}
+                className={`h-full w-full rounded-3xl ${isDarkMode ? "bg-[#0D192C]" : "bg-white"
+                  } overflow-hidden`}
               >
                 <img
                   src="/profile.jpg"
@@ -354,9 +352,8 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className={`text-sm sm:text-base md:text-lg max-w-2xl mx-auto lg:mx-0 ${
-              isDarkMode ? "text-gray-300" : "text-gray-600"
-            } leading-relaxed`}
+            className={`text-sm sm:text-base md:text-lg max-w-2xl mx-auto lg:mx-0 ${isDarkMode ? "text-gray-300" : "text-gray-600"
+              } leading-relaxed`}
           >
             <span className="relative">
               A passionate{" "}
@@ -386,9 +383,8 @@ const Hero = () => {
           </motion.p>
 
           <div
-            className={`text-base sm:text-lg md:text-2xl ${
-              isDarkMode ? "text-gray-300" : "text-gray-700"
-            }`}
+            className={`text-base sm:text-lg md:text-2xl ${isDarkMode ? "text-gray-300" : "text-gray-700"
+              }`}
           >
             <Typewriter
               options={{
@@ -427,7 +423,7 @@ const Hero = () => {
                   d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                 />
               </svg>
-                View Resume
+              View Resume
               <motion.span
                 initial={{ x: -5 }}
                 animate={{ x: 0 }}

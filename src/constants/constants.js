@@ -1,9 +1,9 @@
 export const projects = [
   {
-    title: "Smart Match - AI-Powered Job Matching",
+    title: "Notedly - AI-Powered Full Stack Notes App",
     img: "https://res.cloudinary.com/dhrhmmufs/image/upload/v1751271064/notedly-1_wykid0.png",
     description:
-      "An AI-powered platform that analyzes resumes and job descriptions to generate match scores, skill insights, and downloadable cover letters.",
+      "Notedly is a full-stack note-taking app that allows users to create, edit, pin, archive, and organize rich-text notes. It features a modern UI with a collapsible sidebar and powerful filtering for pinned, archived, and deleted notes. The app uses JWT-based authentication for secure login and protected note access. Integrated GEMINI API for Enhancing Notes  Built with the MERN stack, ShadCN UI, and TinyMCE for a smooth writing experience..",
     github: "https://github.com/ManojKumarAchanta/student-crud-client",
     url: "https://smart-match-ai.vercel.app",
     tags: [
