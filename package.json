@@ -7,7 +7,6 @@
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
     "lint": "eslint .",
-    "postbuild": "react-snap",
     "preview": "vite preview"
   },
   "reactSnap": {
