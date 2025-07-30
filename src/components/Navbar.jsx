@@ -14,6 +14,7 @@ import {
   Moon,
   User,
   MessageCircle,
+  Building2,
 } from "lucide-react";
 
 const Navbar = ({ activeSection, setActiveSection }) => {
@@ -25,6 +26,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
   const navItems = [
     { id: "", label: "Home", icon: Home },
     { id: "about", label: "About", icon: User },
+    { id: "experience", label: "Experience", icon: Building2 },
     { id: "projects", label: "Projects", icon: Briefcase },
     { id: "skills", label: "Skills", icon: Code2 },
     { id: "certifications", label: "Certifications", icon: Award },
