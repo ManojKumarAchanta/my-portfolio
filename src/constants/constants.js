@@ -19,7 +19,7 @@ export const projects = [
     title: "Smart Match - AI-Powered Job Matching",
     img: "https://res.cloudinary.com/dhrhmmufs/image/upload/v1751271202/Screenshot_from_2025-06-27_23-55-07_wihsxx.png",
     description:
-      "A full-featured notes app with JWT auth and Gemini AI integration for enhancing and organizing rich-text notes.",
+      "Built a full-stack AI-driven web application that analyzes resumes and job descriptions to compute match scores using the Gemini API. The system achieved 92% skill-match accuracy by leveraging intelligent keyword extraction, contextual analysis, and natural language processing.",
     github: "https://github.com/ManojKumarAchanta/notedly",
     url: "https://notedly-delta.vercel.app",
     tags: [
