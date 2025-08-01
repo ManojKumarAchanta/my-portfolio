@@ -416,7 +416,10 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() =>
-                window.open("/ManojKumarAchanta_Resume_.pdf", "_blank")
+                window.open(
+                  "https://ik.imagekit.io/mykitt/ManojKumarAchantaResume-2026.pdf?updatedAt=1754042228690",
+                  "_blank"
+                )
               }
               className="w-full md:w-auto px-6 md:px-8 py-2 md:py-3 bg-gradient-to-r from-violet-600 via-indigo-500 to-purple-600 text-white rounded-lg font-medium flex items-center justify-center gap-2 text-sm md:text-base shadow-lg hover:shadow-violet-500/25 transition-all"
             >
