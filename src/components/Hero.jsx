@@ -84,7 +84,9 @@ const Terminal = ({ onClose }) => {
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-purple-400">system ~</span>
-                <span className="text-white">Choose your preferred platform to connect:</span>
+                <span className="text-white">
+                  Choose your preferred platform to connect:
+                </span>
               </div>
               <div className="flex flex-wrap gap-4 mt-6">
                 <motion.a
@@ -176,7 +178,11 @@ const ConnectButton = ({ onClick, isDarkMode }) => {
       className="relative px-4 w-full sm:w-auto md:w-auto md:px-8 py-2 md:py-3 rounded-lg overflow-hidden border-2 border-transparent hover:border-violet-500/30 transition-all whitespace-nowrap"
     >
       <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 via-indigo-500/20 to-purple-600/20 backdrop-blur-sm" />
-      <span className={`${isDarkMode ? "text-white" : "text-gray-800"} relative z-10`}>
+      <span
+        className={`${
+          isDarkMode ? "text-white" : "text-gray-800"
+        } relative z-10`}
+      >
         <span className="text-xs md:text-base">Connect with Me</span>
         {isHovered && (
           <motion.span
@@ -219,8 +225,9 @@ const Hero = () => {
           <div className="absolute -bottom-8 left-20 w-48 sm:w-64 md:w-72 h-48 sm:h-64 md:h-72 bg-violet-600 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
         </div>
         <div
-          className={`absolute inset-0 ${isDarkMode ? "bg-[#0a192f]/90" : "bg-white/90"
-            }`}
+          className={`absolute inset-0 ${
+            isDarkMode ? "bg-[#0a192f]/90" : "bg-white/90"
+          }`}
         ></div>
       </div>
 
@@ -253,8 +260,9 @@ const Hero = () => {
               className="absolute inset-0 rounded-3xl p-1"
             >
               <div
-                className={`h-full w-full rounded-3xl ${isDarkMode ? "bg-[#0D192C]" : "bg-white"
-                  } overflow-hidden`}
+                className={`h-full w-full rounded-3xl ${
+                  isDarkMode ? "bg-[#0D192C]" : "bg-white"
+                } overflow-hidden`}
               >
                 <img
                   src="/profile.jpg"
@@ -314,8 +322,7 @@ const Hero = () => {
             </motion.div>
           </div>
         </motion.div>
-        <Helmet>
-          
+
         {/* Content Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -352,8 +359,9 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className={`text-sm sm:text-base md:text-lg max-w-2xl mx-auto lg:mx-0 ${isDarkMode ? "text-gray-300" : "text-gray-600"
-              } leading-relaxed`}
+            className={`text-sm sm:text-base md:text-lg max-w-2xl mx-auto lg:mx-0 ${
+              isDarkMode ? "text-gray-300" : "text-gray-600"
+            } leading-relaxed`}
           >
             <span className="relative">
               A passionate{" "}
@@ -383,8 +391,9 @@ const Hero = () => {
           </motion.p>
 
           <div
-            className={`text-base sm:text-lg md:text-2xl ${isDarkMode ? "text-gray-300" : "text-gray-700"
-              }`}
+            className={`text-base sm:text-lg md:text-2xl ${
+              isDarkMode ? "text-gray-300" : "text-gray-700"
+            }`}
           >
             <Typewriter
               options={{
@@ -406,7 +415,9 @@ const Hero = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => window.open("/ManojKumarAchanta_Resume_.pdf", "_blank")}
+              onClick={() =>
+                window.open("/ManojKumarAchanta_Resume_.pdf", "_blank")
+              }
               className="w-full md:w-auto px-6 md:px-8 py-2 md:py-3 bg-gradient-to-r from-violet-600 via-indigo-500 to-purple-600 text-white rounded-lg font-medium flex items-center justify-center gap-2 text-sm md:text-base shadow-lg hover:shadow-violet-500/25 transition-all"
             >
               <svg
@@ -452,7 +463,6 @@ const Hero = () => {
             <SocialIcons />
           </motion.div>
         </motion.div>
-              </Helmet>
       </div>
 
       <AnimatePresence>
