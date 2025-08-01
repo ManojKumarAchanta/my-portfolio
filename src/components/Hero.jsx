@@ -399,7 +399,6 @@ const Hero = () => {
               options={{
                 strings: [
                   "Full Stack Developer",
-                  "MERN Stack Enthusiast",
                   "Problem Solver",
                   "Tech Explorer",
                 ],
