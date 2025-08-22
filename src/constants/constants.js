@@ -5,7 +5,7 @@ export const projects = [
     description:
       "Notedly is a full-stack note-taking app that allows users to create, edit, pin, archive, and organize rich-text notes. It features a modern UI with a collapsible sidebar and powerful filtering for pinned, archived, and deleted notes. The app uses JWT-based authentication for secure login and protected note access. Integrated GEMINI API for Enhancing Notes  Built with the MERN stack, ShadCN UI, and TinyMCE for a smooth writing experience..",
     github: "https://github.com/ManojKumarAchanta/student-crud-client",
-    url: "https://smart-match-ai.vercel.app",
+    url: "https://notedly-delta.vercel.app",
     tags: [
       "React",
       "Node.js",
@@ -19,9 +19,9 @@ export const projects = [
     title: "Smart Match - AI-Powered Job Matching",
     img: "https://res.cloudinary.com/dhrhmmufs/image/upload/v1751271202/Screenshot_from_2025-06-27_23-55-07_wihsxx.png",
     description:
-      "Built a full-stack AI-driven web application that analyzes resumes and job descriptions to compute match scores using the Gemini API. The system achieved 92% skill-match accuracy by leveraging intelligent keyword extraction, contextual analysis, and natural language processing.",
+    "Built a full-stack AI-driven web application that analyzes resumes and job descriptions to compute match scores using the Gemini API. The system achieved 92% skill-match accuracy by leveraging intelligent keyword extraction, contextual analysis, and natural language processing.",
     github: "https://github.com/ManojKumarAchanta/notedly",
-    url: "https://notedly-delta.vercel.app",
+    url: "https://smart-match-ai.vercel.app",
     tags: [
       "React",
       "Node.js",
