@@ -89,22 +89,26 @@ export const projects = [
 
 export const certifications = [
   {
+    link: "https://drive.google.com/file/d/16o3egIJuU1Mg19mggS4QG-8eC_40Enzo/view?usp=drive_link",
     title: "HackerRank Problem Solving (Basic)",
     description: "A certification in problem solving from HackerRank.",
     img: "https://res.cloudinary.com/dhrhmmufs/image/upload/v1746456571/hacker-rank_fzyxsx.png", // Add certification image path
   },
   {
+    link: "https://drive.google.com/file/d/1rnMIum8K2yBt14imAHJsBOJvpN_IAzjW/view?usp=sharing",
     title: "Basics of Python",
     description: "Completed a comprehensive course in Python.",
     img: "https://res.cloudinary.com/dhrhmmufs/image/upload/v1746456572/python_ewhocm.png", // Add certification image path
   },
 
   {
+    link:"https://drive.google.com/file/d/1t_rSFMKwCRjs2a9Q2WxhfikAb_eTmSYa/view?usp=sharing",
     title: "Soft Skills",
     description: "A certification in soft skills.",
     img: "https://res.cloudinary.com/dhrhmmufs/image/upload/v1746456572/softskills_k8kv9s.png", // Add certification image path
   },
   {
+    link: "https://drive.google.com/file/d/1NOECRnkJ4xI7ZZZBbrIHOS9nBW6djvYv/view?usp=sharing",
     title: "HackerRank Java (Basic)",
     description: "A certification in Java from HackerRank.",
     img: "https://console.cloudinary.com/app/c-ec559d72ac607f9da92efc162beb91/assets/media_library/search/asset/bc4aff596e8dcb151b046366654961d7/manage/summary?q=&view_mode=mosaic&context=manage", // Add certification image path
