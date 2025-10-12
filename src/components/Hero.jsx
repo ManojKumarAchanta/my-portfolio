@@ -265,7 +265,7 @@ const Hero = () => {
                 } overflow-hidden`}
               >
                 <img
-                  src="/profile.png"
+                  src="/profile.jpeg"
                   alt="Manoj Kumar"
                   className="w-full h-full object-cover object-center rounded-3xl"
                 />
