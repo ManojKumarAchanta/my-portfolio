@@ -17,11 +17,11 @@ const Projects = () => {
             className="bg-white text-black rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
           >
             {/* Project Image */}
-            <div className="relative group aspect-video overflow-hidden bg-gray-100">
+            <div className="relative group aspect-[5/3] overflow-hidden bg-gray-100">
               <img
                 src={project.img}
                 alt={project.title}
-                className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105 filter grayscale"
+                className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105 "
               />
               <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
                 {project.github && (
@@ -49,7 +49,7 @@ const Projects = () => {
 
             {/* Project Details */}
             <div className="p-6">
-              <h3 className="text-xl font-bold text-black mb-3 line-clamp-1">
+              <h3 className="text-lg font-bold text-black mb-3 line-clamp-1">
                 {project.title}
               </h3>
 

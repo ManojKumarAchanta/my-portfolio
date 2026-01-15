@@ -1,9 +1,6 @@
-import { useContext } from "react";
-import { ThemeContext } from "../App";
 import { Briefcase, Calendar, MapPin } from "lucide-react";
 
 const Experience = () => {
-  const { isDarkMode } = useContext(ThemeContext);
 
   const experience = {
     company: "Kaushika Krishna Consultancy",
@@ -68,7 +65,7 @@ const Experience = () => {
               </div>
             </div>
 
-            <p className={`text-base md:text-lg mb-6 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+            <p className="text-base md:text-lg mb-6 text-gray-600">
               {experience.description}
             </p>
 
@@ -79,7 +76,7 @@ const Experience = () => {
               </h4>
 
               <div className="grid md:grid-cols-2 justify-center gap-6">
-                {experience.projects.map((project, index) => (
+                {experience.projects.map((project) => (
                   <div
                     key={project.name}
                     className="rounded-xl p-6 bg-gray-50 border border-gray-200"

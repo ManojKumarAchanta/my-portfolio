@@ -1,11 +1,10 @@
-import { useState, useContext, useRef } from "react";
-import { ThemeContext } from "../App";
+import { useState, useRef } from "react";
 import toast from "react-hot-toast";
 import { PhoneIcon, EnvelopeIcon, MapPinIcon } from "@heroicons/react/24/solid";
 import emailjs from "@emailjs/browser";
+
 const ContactMe = () => {
-  const { isDarkMode } = useContext(ThemeContext);
-  const form = useRef(); // Use useRef for the form
+  const form = useRef();
   const [formData, setFormData] = useState({
     name: "",
     email: "",

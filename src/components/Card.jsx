@@ -1,6 +1,6 @@
-import React from "react";
-
-const Card = ({ title, description, img, github, url }) => {
+import PropTypes from "prop-types";
+const Card = props => {
+  const { title, description, img, github, url } = props;
   const openPage = (link) => {
     window.location.href = link;
   };
@@ -9,8 +9,8 @@ const Card = ({ title, description, img, github, url }) => {
       <div>
         <img
           src={img}
-          alt=""
-          className="rounded-lg w-full h-48 object-cover filter grayscale"
+          alt={title}
+          className="rounded-lg w-full h-48 object-cover filter "
         />
       </div>
       <div className="my-6">
@@ -34,4 +34,12 @@ const Card = ({ title, description, img, github, url }) => {
     </div>
   );
 };
+Card.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  github: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+};
+
 export default Card;

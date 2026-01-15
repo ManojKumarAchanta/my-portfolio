@@ -1,5 +1,4 @@
-import { useContext, useState, useEffect } from "react";
-import { ThemeContext } from "../App";
+import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import {
   Home,
@@ -9,15 +8,11 @@ import {
   Mail,
   Menu,
   X,
-  Sun,
-  Moon,
   User,
-  MessageCircle,
   Building2,
 } from "lucide-react";
 
 const Navbar = ({ activeSection, setActiveSection }) => {
-  const { isDarkMode, toggleTheme } = useContext(ThemeContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
@@ -59,9 +54,9 @@ const Navbar = ({ activeSection, setActiveSection }) => {
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
         {isMenuOpen ? (
-          <X className={isDarkMode ? "text-white" : "text-gray-900"} />
+          <X className="text-gray-900" />
         ) : (
-          <Menu className={isDarkMode ? "text-white" : "text-gray-900"} />
+          <Menu className="text-gray-900" />
         )}
       </button>
 
@@ -69,9 +64,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
       <nav
         className={`fixed ${
           isMenuOpen ? "left-0" : "-left-full md:left-0"
-        } top-0 h-full w-64 transition-all duration-300 ease-in-out z-40 ${
-          isDarkMode ? "bg-gray-800/95 backdrop-blur-md" : "bg-white/95 backdrop-blur-md"
-        } shadow-lg md:w-64`}
+        } top-0 h-full w-64 transition-all duration-300 ease-in-out z-40 bg-white shadow-lg md:w-64 border-r border-gray-200`}
       >
         <div className="flex flex-col h-full p-4">
           {/* Logo */}

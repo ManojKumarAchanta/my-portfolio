@@ -1,8 +1,7 @@
-import { useContext } from "react";
-import { ThemeContext } from "../App";
+
 
 const AboutMe = () => {
-  const { isDarkMode } = useContext(ThemeContext);
+  // const { isDarkMode } = useContext(ThemeContext);
 
   const skills = [
     "MongoDB", "Express.js", "React", "Node.js",

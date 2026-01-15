@@ -1,9 +1,9 @@
-import { useState, useEffect, useContext } from "react";
+import { useState } from "react";
 import Typewriter from "typewriter-effect";
-import { ThemeContext } from "../App.jsx";
 import SocialIcons from "./SocialIcons";
-
-const Terminal = ({ onClose }) => {
+import PropTypes from "prop-types";
+const Terminal = props => {
+  const { onClose } = props;
   return (
     <div className="bg-white p-6 rounded-xl shadow-lg w-full max-w-2xl font-mono text-sm border border-gray-300">
       <div className="flex items-center justify-between mb-4">
@@ -60,69 +60,35 @@ const Terminal = ({ onClose }) => {
     </div>
   );
 };
+Terminal.propTypes = {
+  onClose: PropTypes.func.isRequired,
+};
 
-// const MatrixRain = () => {
-//   return (
-//     <motion.div
-//       initial={{ opacity: 0 }}
-//       animate={{ opacity: 0.2 }}
-//       className="absolute inset-0 overflow-hidden pointer-events-none"
-//     >
-//       {[...Array(10)].map((_, i) => (
-//         <motion.div
-//           key={i}
-//           initial={{ y: -100 }}
-//           animate={{ y: 100 }}
-//           transition={{
-//             duration: 2,
-//             repeat: Infinity,
-//             delay: i * 0.2,
-//             ease: "linear",
-//           }}
-//           className="absolute text-violet-500 text-xs font-mono"
-//           style={{ left: `${i * 10}%` }}
-//         >
-//           {[...Array(4)].map((_, j) => (
-//             <div key={j}>{"</>"};</div>
-//           ))}
-//         </motion.div>
-//       ))}
-//     </motion.div>
-//   );
-// };
 
-const ConnectButton = ({ onClick }) => {
-  const [isHovered, setIsHovered] = useState(false);
 
+const ConnectButton = props => {
+  const { onClick } = props;
   return (
     <button
       onClick={onClick}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      className="relative px-4 w-full sm:w-auto bg-gray-800 md:w-auto md:px-8 py-2 md:py-3 rounded-lg overflow-hidden border border-gray-900 text-white transition-all whitespace-nowrap"
+      className="px-4 w-full sm:w-auto bg-gray-800 md:w-auto md:px-8 py-2 md:py-3 rounded-lg border border-gray-900 text-white transition-all whitespace-nowrap hover:bg-gray-900"
     >
-      <span
-        className="relative z-10"
-      >
-        <span className="text-xs md:text-base">Connect with Me</span>
-        {isHovered && (
-          <span className="absolute bottom-0 left-0 h-[2px] w-full bg-gray-200" />
-        )}
-      </span>
+      <span className="text-xs md:text-base">Connect with Me</span>
     </button>
   );
 };
 
+ConnectButton.propTypes = {
+  onClick: PropTypes.func.isRequired,
+};
+
 const Hero = () => {
-  const [showChat, setShowChat] = useState(false);
   const [showTerminal, setShowTerminal] = useState(false);
-  const { isDarkMode } = useContext(ThemeContext);
-  const resumeURL = "/manojkumar_resume2026.pdf";
+
   const handleShowTerminal = () => {
     setShowTerminal(true);
   };
 
-  // Handler for closing terminal
   const handleCloseTerminal = () => {
     setShowTerminal(false);
   };
@@ -148,7 +114,7 @@ const Hero = () => {
         {/* Content Section */}
         <div className="text-center lg:text-left order-2 lg:order-1 space-y-4 md:space-y-6">
           <h2 className="text-lg sm:text-xl md:text-2xl font-light text-gray-800">
-            Hello World! I'm
+            Hello World! I&apos;m
           </h2>
           <h1
             className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900"
@@ -180,10 +146,7 @@ const Hero = () => {
             </span>
           </p>
 
-          <div
-            className={`text-base sm:text-lg md:text-2xl ${isDarkMode ? "text-gray-300" : "text-gray-700"
-              }`}
-          >
+          <div className="text-base sm:text-lg md:text-2xl text-gray-700">
             <Typewriter
               options={{
                 strings: [
@@ -245,6 +208,12 @@ const Hero = () => {
       )}
     </div>
   );
+};
+
+Hero.propTypes = {
+  showTerminal: PropTypes.bool.isRequired,
+  handleShowTerminal: PropTypes.func.isRequired,
+  handleCloseTerminal: PropTypes.func.isRequired,
 };
 
 export default Hero;

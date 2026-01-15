@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react';
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -8,11 +8,7 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Certifications from './components/Certifications';
 import ContactMe from './components/ContactMe';
-// import Chatbox from './components/Chatbox';
-// import AdminChat from './components/AdminChat';
 import { Toaster } from "react-hot-toast";
-
-export const ThemeContext = createContext();
 
 const MainLayout = () => {
   const [activeSection, setActiveSection] = useState('hero');
@@ -31,32 +27,21 @@ const MainLayout = () => {
           <Route path="certifications" element={<Certifications />} />
           <Route path="contact" element={<ContactMe />} />
         </Routes>
-        {/* <Chatbox /> */}
       </main>
     </div>
   );
 };
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-  };
-
   return (
-    <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
-      <div className={isDarkMode ? 'dark' : ''}>
-        <div className={`min-h-screen ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
-          <Toaster position='top-right' />
-          <Router>
-            <Routes>
-              <Route path="/*" element={<MainLayout />} />
-            </Routes>
-          </Router>
-        </div>
-      </div>
-    </ThemeContext.Provider>
+    <div className="min-h-screen bg-white">
+      <Toaster position='top-right' />
+      <Router>
+        <Routes>
+          <Route path="/*" element={<MainLayout />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 

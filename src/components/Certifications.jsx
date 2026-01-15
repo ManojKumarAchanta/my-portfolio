@@ -1,45 +1,30 @@
-import { useContext } from 'react';
-import { ThemeContext } from '../App';
 import { certifications } from '../constants/constants';
 
-const CertificationCard = ({ certification, index, isDarkMode }) => (
-  <div
-    className={`group relative overflow-hidden rounded-xl shadow-xl ${
-      isDarkMode ? 'bg-gray-800' : 'bg-white'
-    }`}
-  >
+const CertificationCard = ({ certification, index }) => (
+  <div className="group relative overflow-hidden rounded-xl shadow-xl bg-white">
     <div className="relative h-48 overflow-hidden">
       <img
         src={certification.img}
         alt={certification.title}
-        className="w-full h-full object-cover filter grayscale"
+        className="w-full h-full object-cover "
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
     </div>
 
     <div className="p-6">
       <div className="flex items-center justify-between mb-4">
-        <span className={`text-sm font-mono ${
-          isDarkMode ? 'text-gray-400' : 'text-gray-500'
-        }`}>
+        <span className="text-sm font-mono text-gray-500">
           {certification.date}
         </span>
-        <span className={`text-sm font-medium px-3 py-1 rounded-full ${
-          isDarkMode
-            ? 'bg-gray-700 text-gray-300'
-            : 'bg-gray-100 text-gray-600'
-        }`}>
+        <span className="text-sm font-medium px-3 py-1 rounded-full bg-gray-100 text-gray-600">
           {certification.issuer}
         </span>
       </div>
 
-      <h3 className="text-xl font-bold mb-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+      <h3 className="text-xl font-bold mb-2 text-gray-900">
         {certification.title}
       </h3>
 
-      <p className={`mb-4 ${
-        isDarkMode ? 'text-gray-300' : 'text-gray-600'
-      }`}>
+      <p className="mb-4 text-gray-600">
         {certification.description}
       </p>
 
@@ -59,16 +44,14 @@ const CertificationCard = ({ certification, index, isDarkMode }) => (
 );
 
 const Certifications = () => {
-  const { isDarkMode } = useContext(ThemeContext);
-
   return (
     <section className="min-h-screen py-20 px-4 md:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-gray-900">Certifications</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+            Certifications
           </h2>
-          <p className={`text-lg ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} max-w-2xl mx-auto`}>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Professional certifications and courses that have enhanced my technical expertise
           </p>
         </div>
@@ -79,20 +62,15 @@ const Certifications = () => {
               key={index}
               certification={cert}
               index={index}
-              isDarkMode={isDarkMode}
             />
           ))}
         </div>
 
-        <div
-          className={`mt-12 p-6 rounded-xl ${
-            isDarkMode ? 'bg-gray-800' : 'bg-white'
-          } shadow-xl text-center`}
-        >
+        <div className="mt-12 p-6 rounded-xl bg-white shadow-xl text-center border border-gray-200">
           <h3 className="text-xl font-bold mb-4 font-mono text-gray-900">
             Continuous Learning
           </h3>
-          <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+          <p className="text-gray-600">
             Always expanding my knowledge and staying up-to-date with the latest technologies.
             Currently pursuing advanced courses in cloud computing and system design.
           </p>
