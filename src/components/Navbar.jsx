@@ -81,7 +81,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
             animate={{ opacity: 1 }}
             className="mb-8 font-mono text-xl font-bold"
           >
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-sm text-transparent">
+            <span className="text-black text-sm">
               &lt;manojkumarachanta.tech /&gt;
             </span>
           </motion.div>
