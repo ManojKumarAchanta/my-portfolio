@@ -166,7 +166,7 @@ const Hero = () => {
             <button
               onClick={() =>
                 window.open(
-                  "https://ik.imagekit.io/mykitt/ManojKumarAchantaResume-2026.pdf?updatedAt=1754042228690",
+                  "https://ik.imagekit.io/mykitt/ManojKumar-2026.pdf",
                   "_blank"
                 )
               }
