@@ -7,7 +7,9 @@
     font-family: 'Space Grotesk', sans-serif;
   }
 }
-
+html body button{
+  cursor: pointer;
+}
 /* Custom Scrollbar */
 html::-webkit-scrollbar {
   width: 6px;

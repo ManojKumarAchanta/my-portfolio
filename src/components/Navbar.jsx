@@ -99,10 +99,8 @@ const Navbar = ({ activeSection, setActiveSection }) => {
                   onClick={() => handleNavClick(item.id)}
                   className={`w-full flex items-center p-3 rounded-lg transition-all ${
                     isActive
-                      ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg"
-                      : isDarkMode
-                      ? "text-gray-300 hover:bg-gray-700/50"
-                      : "text-gray-600 hover:bg-gray-100/50"
+                      ? "bg-black text-white shadow-lg":
+                      " text-black hover:bg-gray-200"
                   }`}
                 >
                   <Icon className="w-5 h-5" />
@@ -119,7 +117,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
           </div>
 
           {/* Theme Toggle */}
-          <motion.button
+          {/* <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.95 }}
             onClick={toggleTheme}
@@ -140,7 +138,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
                 <span className="ml-4 font-medium">Dark Mode</span>
               </>
             )}
-          </motion.button>
+          </motion.button> */}
         </div>
       </nav>
     </>

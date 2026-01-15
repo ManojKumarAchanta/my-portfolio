@@ -4,9 +4,9 @@ import { Github, ExternalLink } from "lucide-react";
 
 const Projects = () => {
   return (
-    <section className="py-16 px-4 sm:px-8 lg:px-16 bg-white dark:bg-gray-900">
+    <section className="py-16 px-4 sm:px-8 lg:px-16 ">
       <motion.h2
-        className="text-3xl sm:text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400"
+        className="text-3xl sm:text-4xl font-bold text-center mb-12 text-black"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
       >
@@ -17,7 +17,7 @@ const Projects = () => {
         {projects.map((project, index) => (
           <motion.div
             key={project.title}
-            className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl dark:shadow-gray-900/20 transition-all duration-300 border border-gray-200 dark:border-gray-700"
+            className="bg-white text-black rounded-xl overflow-hidden shadow-lg hover:shadow-xl  transition-all duration-300"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -60,11 +60,11 @@ const Projects = () => {
 
             {/* Project Details */}
             <div className="p-6">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 line-clamp-1">
+              <h3 className="text-xl font-bold text-black mb-3 line-clamp-1">
                 {project.title}
               </h3>
 
-              <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm line-clamp-3 h-[60px]">
+              <p className="text-gray-600 mb-4 text-sm line-clamp-3 h-[60px]">
                 {project.description}
               </p>
 
@@ -73,7 +73,7 @@ const Projects = () => {
                 {project.tags.map((tag, i) => (
                   <span
                     key={i}
-                    className="px-2.5 py-1 text-xs font-medium bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 rounded-full border border-blue-200 dark:border-blue-800"
+                    className="px-2.5 py-1 text-xs font-medium bg-black text-white rounded-full border border-gray-300"
                   >
                     {tag}
                   </span>

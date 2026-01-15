@@ -135,35 +135,35 @@ const Terminal = ({ onClose }) => {
   );
 };
 
-const MatrixRain = () => {
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 0.2 }}
-      className="absolute inset-0 overflow-hidden pointer-events-none"
-    >
-      {[...Array(10)].map((_, i) => (
-        <motion.div
-          key={i}
-          initial={{ y: -100 }}
-          animate={{ y: 100 }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            delay: i * 0.2,
-            ease: "linear",
-          }}
-          className="absolute text-violet-500 text-xs font-mono"
-          style={{ left: `${i * 10}%` }}
-        >
-          {[...Array(4)].map((_, j) => (
-            <div key={j}>{"</>"};</div>
-          ))}
-        </motion.div>
-      ))}
-    </motion.div>
-  );
-};
+// const MatrixRain = () => {
+//   return (
+//     <motion.div
+//       initial={{ opacity: 0 }}
+//       animate={{ opacity: 0.2 }}
+//       className="absolute inset-0 overflow-hidden pointer-events-none"
+//     >
+//       {[...Array(10)].map((_, i) => (
+//         <motion.div
+//           key={i}
+//           initial={{ y: -100 }}
+//           animate={{ y: 100 }}
+//           transition={{
+//             duration: 2,
+//             repeat: Infinity,
+//             delay: i * 0.2,
+//             ease: "linear",
+//           }}
+//           className="absolute text-violet-500 text-xs font-mono"
+//           style={{ left: `${i * 10}%` }}
+//         >
+//           {[...Array(4)].map((_, j) => (
+//             <div key={j}>{"</>"};</div>
+//           ))}
+//         </motion.div>
+//       ))}
+//     </motion.div>
+//   );
+// };
 
 const ConnectButton = ({ onClick, isDarkMode }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -175,12 +175,12 @@ const ConnectButton = ({ onClick, isDarkMode }) => {
       onClick={onClick}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="relative px-4 w-full sm:w-auto md:w-auto md:px-8 py-2 md:py-3 rounded-lg overflow-hidden border-2 border-transparent hover:border-violet-500/30 transition-all whitespace-nowrap"
+      className="relative px-4 w-full sm:w-auto bg-gray-400 md:w-auto md:px-8 py-2 md:py-3 rounded-lg overflow-hidden border-2 border-transparent transition-all whitespace-nowrap"
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 via-indigo-500/20 to-purple-600/20 backdrop-blur-sm" />
+      <div className="absolute bg-black backdrop-blur-sm" />
       <span
         className={`${
-          isDarkMode ? "text-white" : "text-gray-800"
+           "text-white"
         } relative z-10`}
       >
         <span className="text-xs md:text-base">Connect with Me</span>
@@ -334,7 +334,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-lg sm:text-xl md:text-2xl font-light text-violet-600 dark:text-violet-400"
+            className="text-lg sm:text-xl md:text-2xl font-light text-black"
           >
             Hello World! I'm
           </motion.h2>
@@ -342,10 +342,10 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className={`text-2xl sm:text-3xl md:text-5xl font-bold 
+            className={`text-2xl sm:text-3xl md:text-5xl font-bold
               ${isDarkMode ? "text-white" : "text-slate-900"}
-              bg-clip-text relative before:absolute before:inset-0 before:-z-10 
-              before:bg-gradient-to-r before:from-violet-600 before:via-indigo-500 before:to-purple-600 
+              bg-clip-text relative before:absolute before:inset-0 before:-z-10
+              before:bg-gradient-to-r before:from-violet-600 before:via-indigo-500 before:to-purple-600
               before:animate-gradient before:w-full before:h-full before:bg-clip-text`}
             style={{
               WebkitTextStroke: isDarkMode ? "1px #3f4454" : "0.5px #1e293b",
@@ -420,7 +420,7 @@ const Hero = () => {
                   "_blank"
                 )
               }
-              className="w-full md:w-auto px-6 md:px-8 py-2 md:py-3 bg-gradient-to-r from-violet-600 via-indigo-500 to-purple-600 text-white rounded-lg font-medium flex items-center justify-center gap-2 text-sm md:text-base shadow-lg hover:shadow-violet-500/25 transition-all"
+              className="w-full md:w-auto px-6 md:px-8 py-2 md:py-3 bg-black text-white rounded-lg font-medium flex items-center justify-center gap-2 text-sm md:text-base shadow-lg hover:shadow-violet-500/25 transition-all"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
