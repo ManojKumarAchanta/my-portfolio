@@ -1,6 +1,4 @@
-import { useContext, useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { ThemeContext } from "../App";
+import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import {
   Home,
@@ -10,15 +8,11 @@ import {
   Mail,
   Menu,
   X,
-  Sun,
-  Moon,
   User,
-  MessageCircle,
   Building2,
 } from "lucide-react";
 
 const Navbar = ({ activeSection, setActiveSection }) => {
-  const { isDarkMode, toggleTheme } = useContext(ThemeContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
@@ -60,9 +54,9 @@ const Navbar = ({ activeSection, setActiveSection }) => {
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
         {isMenuOpen ? (
-          <X className={isDarkMode ? "text-white" : "text-gray-900"} />
+          <X className="text-gray-900" />
         ) : (
-          <Menu className={isDarkMode ? "text-white" : "text-gray-900"} />
+          <Menu className="text-gray-900" />
         )}
       </button>
 
@@ -70,21 +64,15 @@ const Navbar = ({ activeSection, setActiveSection }) => {
       <nav
         className={`fixed ${
           isMenuOpen ? "left-0" : "-left-full md:left-0"
-        } top-0 h-full w-64 transition-all duration-300 ease-in-out z-40 ${
-          isDarkMode ? "bg-gray-800/95 backdrop-blur-md" : "bg-white/95 backdrop-blur-md"
-        } shadow-lg md:w-64`}
+        } top-0 h-full w-64 transition-all duration-300 ease-in-out z-40 bg-white shadow-lg md:w-64 border-r border-gray-200`}
       >
         <div className="flex flex-col h-full p-4">
           {/* Logo */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="mb-8 font-mono text-xl font-bold"
-          >
+          <div className="mb-8 font-mono text-xl font-bold">
             <span className="text-black text-sm">
               &lt;manojkumarachanta.tech /&gt;
             </span>
-          </motion.div>
+          </div>
 
           {/* Nav Items */}
           <div className="flex-1 space-y-2">
@@ -92,10 +80,8 @@ const Navbar = ({ activeSection, setActiveSection }) => {
               const Icon = item.icon;
               const isActive = activeSection === (item.id || "hero");
               return (
-                <motion.button
+                <button
                   key={item.id}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.95 }}
                   onClick={() => handleNavClick(item.id)}
                   className={`w-full flex items-center p-3 rounded-lg transition-all ${
                     isActive
@@ -106,12 +92,9 @@ const Navbar = ({ activeSection, setActiveSection }) => {
                   <Icon className="w-5 h-5" />
                   <span className="ml-4 font-medium">{item.label}</span>
                   {isActive && (
-                    <motion.div
-                      className="ml-auto w-1.5 h-1.5 rounded-full bg-white"
-                      layoutId="activeIndicator"
-                    />
+                    <div className="ml-auto w-1.5 h-1.5 rounded-full bg-white" />
                   )}
-                </motion.button>
+                </button>
               );
             })}
           </div>
