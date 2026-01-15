@@ -1,5 +1,3 @@
-
-import { motion } from "framer-motion";
 import { useContext } from "react";
 import { ThemeContext } from "../App";
 import {
@@ -34,45 +32,21 @@ const Skills = () => {
     { name: "SQL", icon: Database, color: "#4479A1" },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.1 },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: { y: 0, opacity: 1 },
-  };
-
   return (
-    <div className="min-h-screen py-8">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="text-center mb-12"
-      >
+    <div className="min-h-screen py-8 bg-white">
+      <div className="text-center mb-12">
         <h2 className={`text-3xl font-bold mb-4 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
           Technical Skills
         </h2>
         <p className={`text-lg ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
           Technologies I work with
         </p>
-      </motion.div>
+      </div>
 
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        className="grid grid-cols-2 md:grid-cols-4 gap-8 px-4 max-w-5xl mx-auto"
-      >
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 px-4 max-w-5xl mx-auto">
         {skills.map((skill) => (
-          <motion.div
+          <div
             key={skill.name}
-            variants={itemVariants}
-            whileHover={{ scale: 1.1 }}
             className={`flex flex-col items-center p-4 rounded-xl ${
               isDarkMode ? "bg-gray-800/50 hover:bg-gray-700/50" : "bg-white/50 hover:bg-gray-50/50"
             } backdrop-blur-sm shadow-lg`}
@@ -81,9 +55,9 @@ const Skills = () => {
             <span className={`text-sm font-medium ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}>
               {skill.name}
             </span>
-          </motion.div>
+          </div>
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 };

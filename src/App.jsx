@@ -10,8 +10,7 @@ import Certifications from './components/Certifications';
 import ContactMe from './components/ContactMe';
 // import Chatbox from './components/Chatbox';
 // import AdminChat from './components/AdminChat';
-import {Toaster} from "react-hot-toast";
-import { AnimatePresence } from 'framer-motion';
+import { Toaster } from "react-hot-toast";
 
 export const ThemeContext = createContext();
 
@@ -23,17 +22,15 @@ const MainLayout = () => {
     <div className="flex">
       <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
       <main className="flex-1 ml-0 md:ml-64 min-h-screen">
-        <AnimatePresence mode="wait">
-          <Routes location={location} key={location.pathname}>
-            <Route index element={<Hero />} />
-            <Route path="about" element={<AboutMe />} />
-            <Route path="experience" element={<Experience />} />
-            <Route path="projects" element={<Projects />} />
-            <Route path="skills" element={<Skills />} />
-            <Route path="certifications" element={<Certifications />} />
-            <Route path="contact" element={<ContactMe />} />
-          </Routes>
-        </AnimatePresence>
+        <Routes location={location} key={location.pathname}>
+          <Route index element={<Hero />} />
+          <Route path="about" element={<AboutMe />} />
+          <Route path="experience" element={<Experience />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="skills" element={<Skills />} />
+          <Route path="certifications" element={<Certifications />} />
+          <Route path="contact" element={<ContactMe />} />
+        </Routes>
         {/* <Chatbox /> */}
       </main>
     </div>
@@ -50,7 +47,7 @@ function App() {
   return (
     <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
       <div className={isDarkMode ? 'dark' : ''}>
-        <div className={`min-h-screen ${isDarkMode ? 'bg-[#0D192C]' : 'bg-gray-50'}`}>
+        <div className={`min-h-screen ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
           <Toaster position='top-right' />
           <Router>
             <Routes>

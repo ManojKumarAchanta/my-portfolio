@@ -1,5 +1,4 @@
 import { useState, useContext, useRef } from "react";
-import { motion } from "framer-motion";
 import { ThemeContext } from "../App";
 import toast from "react-hot-toast";
 import { PhoneIcon, EnvelopeIcon, MapPinIcon } from "@heroicons/react/24/solid";
@@ -37,90 +36,50 @@ const ContactMe = () => {
   return (
     <section
       id="contact"
-      className={`py-16 md:py-20 ${isDarkMode ? "bg-[#0a192f]" : "bg-gray-50"}`}
+      className="py-16 md:py-20 bg-white"
     >
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
+        <div className="text-center mb-12">
           <h2
-            className={`text-3xl md:text-4xl font-bold mb-4 ${
-              isDarkMode ? "text-violet-400" : "text-violet-600"
-            }`}
+            className="text-3xl md:text-4xl font-bold mb-4 text-gray-900"
           >
             Contact Me
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-violet-600 via-indigo-500 to-purple-600 mx-auto rounded-full"></div>
-        </motion.div>
+          <div className="w-24 h-0.5 bg-gray-900 mx-auto rounded-full"></div>
+        </div>
 
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
             {/* Contact Info */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="space-y-6"
-            >
+            <div className="space-y-6">
               <div className="flex items-center space-x-4">
-                <div
-                  className={`p-3 rounded-full ${
-                    isDarkMode ? "bg-violet-500/20" : "bg-violet-100"
-                  }`}
-                >
+                <div className="p-3 rounded-full bg-gray-100">
                   <PhoneIcon
-                    className={`w-6 h-6 ${
-                      isDarkMode ? "text-violet-400" : "text-violet-600"
-                    }`}
+                    className="w-6 h-6 text-gray-800"
                   />
                 </div>
                 <div>
-                  <h3
-                    className={`text-lg font-semibold ${
-                      isDarkMode ? "text-gray-200" : "text-gray-800"
-                    }`}
-                  >
+                  <h3 className="text-lg font-semibold text-gray-900">
                     Phone
                   </h3>
-                  <p
-                    className={`${
-                      isDarkMode ? "text-gray-400" : "text-gray-600"
-                    }`}
-                  >
+                  <p className="text-gray-700">
                     +91 6304957172
                   </p>
                 </div>
               </div>
 
               <div className="flex items-center space-x-4">
-                <div
-                  className={`p-3 rounded-full ${
-                    isDarkMode ? "bg-violet-500/20" : "bg-violet-100"
-                  }`}
-                >
+                <div className="p-3 rounded-full bg-gray-100">
                   <EnvelopeIcon
-                    className={`w-6 h-6 ${
-                      isDarkMode ? "text-violet-400" : "text-violet-600"
-                    }`}
+                    className="w-6 h-6 text-gray-800"
                   />
                 </div>
                 <div>
-                  <h3
-                    className={`text-lg font-semibold ${
-                      isDarkMode ? "text-gray-200" : "text-gray-800"
-                    }`}
-                  >
+                  <h3 className="text-lg font-semibold text-gray-900">
                     Email
                   </h3>
                   <p
-                    className={`${
-                      isDarkMode ? "text-gray-400" : "text-gray-600"
-                    } break-all`}
+                    className="text-gray-700 break-all"
                   >
                     manojkumarachanta@gmail.com
                   </p>
@@ -128,43 +87,25 @@ const ContactMe = () => {
               </div>
 
               <div className="flex items-center space-x-4">
-                <div
-                  className={`p-3 rounded-full ${
-                    isDarkMode ? "bg-violet-500/20" : "bg-violet-100"
-                  }`}
-                >
+                <div className="p-3 rounded-full bg-gray-100">
                   <MapPinIcon
-                    className={`w-6 h-6 ${
-                      isDarkMode ? "text-violet-400" : "text-violet-600"
-                    }`}
+                    className="w-6 h-6 text-gray-800"
                   />
                 </div>
                 <div>
-                  <h3
-                    className={`text-lg font-semibold ${
-                      isDarkMode ? "text-gray-200" : "text-gray-800"
-                    }`}
-                  >
+                  <h3 className="text-lg font-semibold text-gray-900">
                     Location
                   </h3>
-                  <p
-                    className={`${
-                      isDarkMode ? "text-gray-400" : "text-gray-600"
-                    }`}
-                  >
+                  <p className="text-gray-700">
                     Andhra Pradesh, India
                   </p>
                 </div>
               </div>
-            </motion.div>
+              </div>
 
             {/* Contact Form */}
-            <motion.form
+            <form
               ref={form}
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
               onSubmit={handleSubmit}
               className="space-y-4"
             >
@@ -175,11 +116,7 @@ const ContactMe = () => {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Your Name"
-                  className={`w-full p-3 rounded-lg ${
-                    isDarkMode
-                      ? "bg-gray-800 text-gray-200 border-gray-700 focus:border-violet-500"
-                      : "bg-white text-gray-800 border-gray-300 focus:border-violet-500"
-                  } border focus:outline-none focus:ring-2 focus:ring-violet-500/20 transition-colors`}
+                  className="w-full p-3 rounded-lg bg-white text-gray-800 border border-gray-300 focus:border-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-200 transition-colors"
                   required
                 />
               </div>
@@ -190,11 +127,7 @@ const ContactMe = () => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Your Email"
-                  className={`w-full p-3 rounded-lg ${
-                    isDarkMode
-                      ? "bg-gray-800 text-gray-200 border-gray-700 focus:border-violet-500"
-                      : "bg-white text-gray-800 border-gray-300 focus:border-violet-500"
-                  } border focus:outline-none focus:ring-2 focus:ring-violet-500/20 transition-colors`}
+                  className="w-full p-3 rounded-lg bg-white text-gray-800 border border-gray-300 focus:border-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-200 transition-colors"
                   required
                 />
               </div>
@@ -205,27 +138,17 @@ const ContactMe = () => {
                   onChange={handleChange}
                   placeholder="Your Message"
                   rows="4"
-                  className={`w-full p-3 rounded-lg ${
-                    isDarkMode
-                      ? "bg-gray-800 text-gray-200 border-gray-700 focus:border-violet-500"
-                      : "bg-white text-gray-800 border-gray-300 focus:border-violet-500"
-                  } border focus:outline-none focus:ring-2 focus:ring-violet-500/20 transition-colors`}
+                  className="w-full p-3 rounded-lg bg-white text-gray-800 border border-gray-300 focus:border-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-200 transition-colors"
                   required
                 ></textarea>
               </div>
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+              <button
                 type="submit"
-                className={`w-full py-3 px-6 rounded-lg ${
-                  isDarkMode
-                    ? "bg-violet-600 hover:bg-violet-700"
-                    : "bg-violet-500 hover:bg-violet-600"
-                } text-white font-semibold transition-colors`}
+                className="w-full py-3 px-6 rounded-lg bg-black hover:bg-gray-900 text-white font-semibold transition-colors"
               >
                 Send Message
-              </motion.button>
-            </motion.form>
+              </button>
+            </form>
           </div>
         </div>
       </div>

@@ -1,5 +1,4 @@
 import { useContext, useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import { ThemeContext } from "../App";
 import { useNavigate, useLocation } from "react-router-dom";
 import {
@@ -76,15 +75,11 @@ const Navbar = ({ activeSection, setActiveSection }) => {
       >
         <div className="flex flex-col h-full p-4">
           {/* Logo */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="mb-8 font-mono text-xl font-bold"
-          >
+          <div className="mb-8 font-mono text-xl font-bold">
             <span className="text-black text-sm">
               &lt;manojkumarachanta.tech /&gt;
             </span>
-          </motion.div>
+          </div>
 
           {/* Nav Items */}
           <div className="flex-1 space-y-2">
@@ -92,10 +87,8 @@ const Navbar = ({ activeSection, setActiveSection }) => {
               const Icon = item.icon;
               const isActive = activeSection === (item.id || "hero");
               return (
-                <motion.button
+                <button
                   key={item.id}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.95 }}
                   onClick={() => handleNavClick(item.id)}
                   className={`w-full flex items-center p-3 rounded-lg transition-all ${
                     isActive
@@ -106,12 +99,9 @@ const Navbar = ({ activeSection, setActiveSection }) => {
                   <Icon className="w-5 h-5" />
                   <span className="ml-4 font-medium">{item.label}</span>
                   {isActive && (
-                    <motion.div
-                      className="ml-auto w-1.5 h-1.5 rounded-full bg-white"
-                      layoutId="activeIndicator"
-                    />
+                    <div className="ml-auto w-1.5 h-1.5 rounded-full bg-white" />
                   )}
-                </motion.button>
+                </button>
               );
             })}
           </div>
