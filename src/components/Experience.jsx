@@ -3,6 +3,15 @@ import { Briefcase, Calendar, MapPin } from "lucide-react";
 const Experience = () => {
   const experiences = [
     {
+      company: "DAZN",
+      position: "Software Development Intern",
+      location: "Hyderabad, India",
+      duration: "Dec 2025 – Present",
+      description:
+      "As a Software Development Intern at DAZN, I worked on building and improving scalable web applications for a high-traffic sports streaming platform. I contributed to frontend features, backend services, and API integrations with a focus on performance, reliability, and clean architecture.",
+      // No projects here — handled safely
+    },
+    {
       company: "Kaushika Krishna Consultancy",
       position: "Full Stack Development Intern",
       location: "Tadepalligudem, Andhra Pradesh",
@@ -25,15 +34,6 @@ const Experience = () => {
           ],
         },
       ],
-    },
-    {
-      company: "DAZN",
-      position: "Software Development Intern",
-      location: "Hyderabad, India",
-      duration: "Dec 2025 – Present",
-      description:
-        "As a Software Development Intern at DAZN, I worked on building and improving scalable web applications for a high-traffic sports streaming platform. I contributed to frontend features, backend services, and API integrations with a focus on performance, reliability, and clean architecture.",
-      // No projects here — handled safely
     },
   ];
 
